@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/bluecar.png" type="Texture" id=1]
+[ext_resource path="res://Car.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.5, 6.00001 )
+
+[node name="Car" type="KinematicBody2D" groups=["race_car"]]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -4.22387, 9.22075 )
+rotation = -1.5708
+scale = Vector2( 0.049083, 0.049083 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 211.235, 64.7949, 47.8855, 32.222 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.00001, 9 )
+rotation = -1.5708
+shape = SubResource( 1 )
